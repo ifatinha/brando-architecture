@@ -15,43 +15,6 @@ a {
     display: flex;
 }
 
-/*Main*/
-main {
-    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("../assets/images/background5.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    position: relative;
-}
-
-/*Header CSS*/
-main .main-text {
-    position: absolute;
-    left: 20%;
-    top: 35%;
-    text-transform: uppercase;
-}
-
-main .main-text p {
-    color: var(--light-gray);
-    font-size: 1.2em;
-    margin-bottom: 2%;
-}
-
-main .main-text .hr {
-    border: none;
-    background-color: var(--red);
-    height: 3px;
-    width: 56.6%;
-}
-
-main .main-text h1 {
-    color: white;
-    font-size: 5em;
-    font-weight: bolder;
-    letter-spacing: 0.1em;
-}
-
 /*Sections CSS*/
 section {
     display: flex;
