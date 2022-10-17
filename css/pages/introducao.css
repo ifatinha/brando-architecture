@@ -1,16 +1,16 @@
 .introducao {
+    align-items: center;
     background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)),
-        url("../../assets/images/background1.jpg");
+        url("../../assets/images/architecture-img3.jpg.webp");
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     height: 100vh;
-    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .introducao .introducao-texto {
-    position: absolute;
-    left: 20%;
-    top: 35%;
+    margin-top: 60px;
     text-transform: uppercase;
 }
 
@@ -20,16 +20,45 @@
     margin-bottom: 2%;
 }
 
-.introducao-texto .hr {
-    border: none;
-    background-color: var(--cor-07);
-    height: 3px;
-    width: 56.6%;
-}
-
 .introducao-texto h1 {
     color: var(--cor-06);
-    font-size: 5em;
+    font-size: 5rem;
     font-weight: bolder;
-    letter-spacing: 0.1em;
+    line-height: 95px;
+    position: relative;
+}
+
+.introducao-texto h1::before {
+    background-color: var(--cor-07);
+    content: "";
+    display: block;
+    height: 6px;
+    left: -90px;
+    position: absolute;
+    top: 40px;
+    width: 50px;
+}
+
+@media screen and (max-width: 800px) {
+
+    .introducao .introducao-texto {
+        margin-top: 150px;
+    }
+
+    .introducao-texto h1::before {
+        left: 0px;
+        top: -80px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .introducao-texto p {
+        width: 20ch;
+    }
+
+    .introducao-texto h1 {
+        font-size: 2em;
+        line-height: 50px;
+    }
 }
