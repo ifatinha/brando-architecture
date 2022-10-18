@@ -7,10 +7,12 @@
 /* CSS Global */
 @import "./global/global.css";
 
+/* Componentes */
+@import "./util/container.css";
+
 /* CSS Sections*/
 @import "./pages/header.css";
 @import "./pages/introducao.css";
 @import "./pages/sobre.css";
-
-/* Componentes */
-@import "./util/container.css";
+@import "./pages/servicos.css";
+@import "./pages/projetos.css";

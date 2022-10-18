@@ -20,7 +20,7 @@
 .container-item {
     flex: 1;
     overflow: hidden;
-    padding: 100px;
+    padding: 110px 90px;
     position: relative;
 }
 
@@ -28,10 +28,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-}
-
-.imagem-sobre {
-    background-image: url("../../assets/images/section-about.jpg");
 }
 
 .container-item h2 {
@@ -55,13 +51,7 @@
     letter-spacing: 0.26px;
     line-height: 45px;
     margin-top: 80px;
-    max-width: 350px;
-}
-
-.container-texto {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+    margin-right: 150px;
 }
 
 .container-links {
@@ -95,7 +85,7 @@
     width: 100%;
 }
 
-.container-texto .container-paragrafo {
+.container-paragrafo {
     color: var(--cor-08);
     font-size: 0.875rem;
     font-weight: 500;
@@ -109,7 +99,7 @@
     font-weight: 600;
     letter-spacing: 0.26px;
     line-height: 30px;
-    margin: 50px 100px 50px 0;
+    margin: 50px 150px 50px 0;
 }
 
 p.container-citacao::before {
@@ -119,6 +109,7 @@ p.container-citacao::before {
     font-weight: 600;
     font-size: 12.5rem;
     margin-bottom: 15px;
+    margin-left: -10px;
 }
 
 .citacao-autor {
@@ -145,6 +136,7 @@ p.container-citacao::before {
         font-size: 1.5rem;
         line-height: 35px;
         margin-top: 50px;
+        margin-right: 0px;
     }
 
     .container-bottom {
