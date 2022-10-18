@@ -14,27 +14,6 @@ a {
     text-transform: uppercase;
 }
 
-section .column-bottom:last-child p.column-bottom__paragraph::before {
-    content: "“";
-    color: var(--dark-black);
-    display: block;
-    font-weight: normal;
-    font-size: 12em;
-    position: absolute;
-    top: 30%;
-    left: 18%;
-}
-
-section .column-bottom:last-child p.column-bottom__paragraph {
-    color: var(--white);
-    font-weight: bolder;
-    font-size: 1.2em;
-    letter-spacing: 0.1em;
-    line-height: 1.5em;
-    margin-top: 20%;
-    margin-bottom: 8%;
-}
-
 section .column-bottom:last-child p.column-bottom__name {
     font-size: 0.7em;
     text-transform: uppercase;

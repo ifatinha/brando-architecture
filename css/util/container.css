@@ -5,8 +5,7 @@
 }
 
 .vermelho {
-    background-color: var(--cor-07);
-    background: linear-gradient(to right, var(--cor-07) 80%, var(--cor-05) 0);
+    background: linear-gradient(to right, var(--cor-07) 80%, var(--cor-06) 0);
 }
 
 .number {
@@ -62,7 +61,7 @@
 .container-texto {
     display: flex;
     flex-direction: column;
-    background-color: darkblue;
+    padding: 10px;
 }
 
 .container-links {
@@ -104,6 +103,39 @@
     margin-bottom: 30px;
 }
 
+.container-citacao {
+    color: var(--cor-06);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.26px;
+    line-height: 30px;
+    margin: 50px 100px 50px 0;
+}
+
+p.container-citacao::before {
+    content: "“";
+    color: var(--cor-01);
+    display: block;
+    font-weight: 600;
+    font-size: 12.5rem;
+    margin-bottom: 15px;
+}
+
+.citacao-autor {
+    color: var(--cor-06);
+    font-weight: 600;
+    font-size: 0.812rem;
+    letter-spacing: 0.26px;
+    line-height: 23px;
+}
+
+.citacao-empresa {
+    font-size: 0.687rem;
+    font-weight: 500;
+    letter-spacing: 0.26px;
+    line-height: 20px;
+}
+
 @media screen and (max-width: 800px) {
     .container-item {
         padding: 40px;
@@ -122,6 +154,15 @@
 
     .container-texto {
         align-items: flex-start;
+    }
+
+    .vermelho {
+        background: var(--cor-07);
+    }
+
+    .container-citacao {
+        margin-right: 0px;
+        margin-left: 0px;
     }
 }
 
@@ -142,4 +183,6 @@
         flex-direction: column;
         gap: 30px;
     }
+
+    .container-citacao {}
 }
