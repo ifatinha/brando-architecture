@@ -10,44 +10,8 @@ a {
     text-decoration: none;
 }
 
-.column-bottom {
-    height: 550px;
-    padding: 8%;
-    margin-top: -4px;
-}
-
-section .column-bottom .column-bottom__menu {
-    justify-content: space-around;
-    margin-bottom: 12%;
-    width: 90%;
-}
-
-section .column-bottom .column-bottom__menu a {
-    display: inline-block;
-    color: var(--dark-gray);
-    font-weight: 800;
-    font-size: 0.8em;
-    padding-bottom: 2%;
+.texto-transform {
     text-transform: uppercase;
-}
-
-section .column-bottom .column-bottom__menu a:first-child {
-    border-bottom: 2px solid var(--red);
-}
-
-section .column-bottom .column-bottom__menu a:not(a:first-child):hover {
-    border-bottom: 2px solid var(--red);
-}
-
-section .column-bottom .column-paragraph {
-    color: var(--dark-gray);
-    font-size: 0.9em;
-    line-height: 1.6em;
-    padding: 0 1%;
-}
-
-section .column-bottom .column-paragraph p:first-child {
-    margin-bottom: 5%;
 }
 
 section .column-bottom:last-child {
