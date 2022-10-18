@@ -14,13 +14,6 @@ a {
     text-transform: uppercase;
 }
 
-section .column-bottom:last-child {
-    background-color: #e31d3b;
-    padding: 8%;
-    position: relative;
-    width: 40%;
-}
-
 section .column-bottom:last-child p.column-bottom__paragraph::before {
     content: "“";
     color: var(--dark-black);

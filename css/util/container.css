@@ -62,6 +62,7 @@
 .container-texto {
     display: flex;
     flex-direction: column;
+    background-color: darkblue;
 }
 
 .container-links {
