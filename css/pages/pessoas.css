@@ -14,7 +14,6 @@
 }
 
 .pessoas-item {
-    cursor: pointer;
     flex: 1 0 250px;
     position: relative;
 }
