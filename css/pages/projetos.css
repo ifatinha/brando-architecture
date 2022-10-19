@@ -55,58 +55,56 @@
 
 .projetos-imagens img {
     transition: transform .3s;
-    width: 100%;
 }
 
-/* 
+.projetos-imagens:hover img {
+    transform: scale(1.1);
+}
+
 .projetos-imagens .overflow-img {
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
     bottom: 0;
-    color: var(--var-06);
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    justify-content: flex-end;
     left: 0;
     overflow: hidden;
+    opacity: 0;
     position: absolute;
-    transform: scale(0);
-    transition: transform .3s ease;
+    transition: .5s ease;
     right: 0;
     width: 100%;
 }
 
 .projetos-imagens .overflow-img hr {
-    background-color: var(--var-07);
+    background-color: var(--cor-07);
     border: none;
-    height: 5px;
-    left: 45%;
-    position: absolute;
-    top: 60%;
-    transform: rotate(-50%, -50%);
-    text-align: center;
-    width: 10px;
+    height: 4px;
+    width: 30px;
 }
 
-.projetos-imagens .overflow-img .overflow-text {
-    font-size: 0.8em;
-    left: 50%;
-    position: absolute;
-    top: 70%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    text-transform: uppercase;
+.projetos-imagens .overflow-img h3 {
+    color: var(--cor-06);
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 25px;
+    opacity: 1;
+    padding: 30px 15px 10px 15px;
 }
 
-.projetos-imagens.overflow-img span.overflow-text {
-    color: var(--cor-02);
-    top: 76%;
+.projetos-imagens .overflow-img span {
+    color: var(--cor-09);
+    font-size: 0.687rem;
+    font-weight: 500;
+    line-height: 20px;
+    padding-bottom: 20px;
 }
 
 .projetos-imagens:hover .overflow-img {
-    transform: scale(1.1);
+    opacity: 1;
 }
-
-.projetos-imagens:hover img {
-    transform: scale(1.1);
-} */
 
 @media screen and (max-width: 750px) {
     .projetos-menu {
