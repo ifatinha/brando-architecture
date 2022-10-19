@@ -19,7 +19,7 @@
 }
 
 .blog-item .blog-card {
-    flex: 1 0 280px;
+    flex: 1 0 250px;
 }
 
 .blog-item .blog-img {
@@ -74,7 +74,7 @@
 }
 
 @media screen and (max-width: 800px) {
-    .blog-container .blog-item {
+    /* .blog-container .blog-item {
         width: 100%;
     }
 
@@ -84,5 +84,5 @@
 
     .ordem-1 {
         order: 1;
-    }
+    } */
 }
