@@ -1,0 +1,38 @@
+.pessoa-bg {
+    background-image: url("../../assets/images/section-people.jpg");
+}
+
+.container-pessoas {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 130px 2%;
+    width: 100%;
+}
+
+.pessoas-item {
+    cursor: pointer;
+    flex: 1 0 250px;
+    position: relative;
+}
+
+.pessoas-item .overlay-pessoa {
+    background-color: rgba(227, 29, 59, 0.80);
+    bottom: 0;
+    color: var(--cor-06);
+    height: 70%;
+    left: 0;
+    margin: 10px auto;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    transition: .5s ease;
+    width: 60%;
+}
+
+.pessoas-item:hover .overlay-pessoa {
+    /* height: 70%; */
+}
