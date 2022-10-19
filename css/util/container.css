@@ -175,6 +175,4 @@ p.container-citacao::before {
         flex-direction: column;
         gap: 30px;
     }
-
-    .container-citacao {}
 }
