@@ -14,21 +14,6 @@ a {
     text-transform: uppercase;
 }
 
-section .section-blog,
-section .section-comments {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -4px auto;
-    overflow: hidden;
-    width: 80%;
-}
-
-section .section-blog .row-card__blog {
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-}
-
 section .section-blog .card-blog {
     cursor: pointer;
     overflow: hidden;
