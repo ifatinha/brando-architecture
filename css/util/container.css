@@ -5,9 +5,15 @@
     width: 100%;
 }
 
+.item-bottom {
+    margin: 0 37.4px;
+    max-width: 600px;
+    overflow: hidden;
+    padding: 110px 90px;
+}
+
 .vermelho {
     background-color: var(--cor-07);
-    max-width: 600px;
 }
 
 .number {
@@ -134,6 +140,10 @@ p.container-citacao::before {
         width: 100%;
     }
 
+    .container-item:first-of-type {
+        height: 550px;
+    }
+
     .container-item .paragrafo {
         font-size: 1.5rem;
         line-height: 35px;
@@ -155,8 +165,12 @@ p.container-citacao::before {
         margin-left: 0px;
     }
 
-    .vermelho {
-        max-width: 800px;
+    .item-bottom {
+        margin: 0;
+        padding-top: 70px;
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 100%;
     }
 }
 
