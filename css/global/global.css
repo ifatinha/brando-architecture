@@ -14,51 +14,6 @@ a {
     text-transform: uppercase;
 }
 
-section .column-bottom form {
-    margin-top: -5%;
-    padding: 1% 15%;
-    width: 100%;
-}
-
-section .column-bottom form .form-element {
-    margin: 2% 0;
-    width: 100%;
-}
-
-.column-bottom form .form-element input,
-.column-bottom form .form-element select,
-.column-bottom form .form-element textarea {
-    border: 2px solid #dfdfdf;
-    font-family: 'Montserrat', sans-serif;
-    outline: none;
-    padding: 12px 18px;
-    transition: 2s;
-    width: 100%;
-}
-
-.column-bottom form .form-element textarea {
-    resize: none;
-}
-
-.column-bottom form .form-element button {
-    background-color: var(--dark-black);
-    border: none;
-    color: var(--white);
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    transition: 1s;
-    padding: 14px 16px;
-    width: 50%;
-}
-
-.column-bottom form .form-element button:hover {
-    background-color: var(--white);
-    border: 2px solid var(--dark-black);
-    color: var(--dark-black);
-}
-
 section .contact-itens {
     align-items: center;
     display: flex;

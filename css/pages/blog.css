@@ -146,6 +146,7 @@
 
 .blog-citacao {
     background-color: var(--cor-07);
+    width: 100%;
 }
 
 .blog-citacao .container-citacao {

@@ -2,10 +2,12 @@
 .container-bottom {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .vermelho {
-    background: linear-gradient(to right, var(--cor-07) 80%, var(--cor-06) 0);
+    background-color: var(--cor-07);
+    max-width: 600px;
 }
 
 .number {
@@ -18,10 +20,10 @@
 }
 
 .container-item {
-    flex: 1;
     overflow: hidden;
     padding: 110px 90px;
     position: relative;
+    width: 50%;
 }
 
 .imagem-bg {
@@ -99,7 +101,6 @@
     font-weight: 600;
     letter-spacing: 0.26px;
     line-height: 30px;
-    margin: 50px 150px 50px 0;
 }
 
 p.container-citacao::before {
@@ -129,7 +130,8 @@ p.container-citacao::before {
 
 @media screen and (max-width: 800px) {
     .container-item {
-        padding: 40px;
+        padding: 50px;
+        width: 100%;
     }
 
     .container-item .paragrafo {
@@ -148,13 +150,13 @@ p.container-citacao::before {
         align-items: flex-start;
     }
 
-    .vermelho {
-        background: var(--cor-07);
-    }
-
     .container-citacao {
         margin-right: 0px;
         margin-left: 0px;
+    }
+
+    .vermelho {
+        max-width: 800px;
     }
 }
 

@@ -3,16 +3,58 @@
 }
 
 .contato-formulario {
-    background-color: darkblue;
     margin: 0 auto;
     max-width: 400px;
     width: 100%;
 }
 
+.contato-formulario .formulario-item {
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
 .contato-formulario input,
 .contato-formulario select,
 .contato-formulario textarea {
+    background-color: var(--cor-06);
+    border: 2px solid rgba(0, 0, 0, .1);
+    color: var(--cor-08);
+    display: block;
+    padding: 12px 15px;
+    transition: .3s;
     width: 100%;
 }
 
-/*VisBug*/
+.contato-formulario input {
+    font-size: 0.875rem;
+}
+
+.contato-formulario input::placeholder,
+.contato-formulario select,
+.contato-formulario textarea {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.26px;
+    line-height: 23px;
+    text-transform: uppercase;
+}
+
+.formulario-item .contato-botao {
+    background-color: var(--cor-01);
+    border: 2px solid transparent;
+    color: var(--cor-06);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.812rem;
+    line-height: 18px;
+    transition: .3s;
+    text-align: center;
+    padding: 12px 15px;
+}
+
+.formulario-item .contato-botao:hover {
+    background-color: var(--cor-06);
+    border: 2px solid var(--cor-01);
+    color: var(--cor-01);
+}
