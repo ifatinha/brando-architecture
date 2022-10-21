@@ -1,19 +1,28 @@
-.container,
-.container-bottom {
+.container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
 
+.container-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
 .item-bottom {
-    margin: 0 37.4px;
-    max-width: 600px;
+    width: 600px;
     overflow: hidden;
     padding: 110px 90px;
 }
 
 .vermelho {
     background-color: var(--cor-07);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .number {
@@ -125,6 +134,7 @@ p.container-citacao::before {
     font-size: 0.812rem;
     letter-spacing: 0.26px;
     line-height: 23px;
+    margin-top: 50px;
 }
 
 .citacao-empresa {
@@ -167,10 +177,8 @@ p.container-citacao::before {
 
     .item-bottom {
         margin: 0;
-        padding-top: 70px;
-        padding-left: 20px;
-        padding-right: 20px;
-        max-width: 100%;
+        padding: 40px 20px;
+        width: 100%;
     }
 }
 

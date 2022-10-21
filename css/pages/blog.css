@@ -11,8 +11,7 @@
     width: 100%;
 }
 
-.blog-container .blog-item,
-.blog-container .comentarios-bg {
+.blog-container .blog-item {
     display: flex;
     flex-wrap: wrap;
     max-width: 600px;
@@ -84,7 +83,6 @@
 
 .blog-comentarios {
     background-color: var(--cor-05);
-    padding: 90px 90px 0;
 }
 
 .blog-comentarios .comentario-item {
@@ -158,13 +156,8 @@
         margin: 0 auto;
     }
 
-    .blog-comentarios {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .blog-container .comentarios-bg {
-        max-width: 800px;
+    .comentario-item .comentario-texto {
+        margin-top: 30px;
     }
 }
 
