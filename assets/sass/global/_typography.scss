@@ -1,0 +1,32 @@
+@use "sass:math";
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
+
+$font-01: "Fira Sans";
+
+@function rem($pixel, $context: 16) {
+   @return math.div($pixel, $context) * 1rem;
+}
+
+$typography-sizes: (
+   14:rem(14),
+   16:rem(16),
+   18:rem(18),
+   20:rem(20),
+   24:rem(24),
+   38:rem(38),
+   48:rem(48),
+   72:rem(72),
+   128:rem(128),
+);
+
+@mixin typography-01($size) {
+   font-family: $font-01, sans-serif;
+
+   @if map-has-key($map: $typography-sizes, $key: $size) {
+      font-size: map-get($map: $typography-sizes, $key: $size);
+   }
+
+   @else {
+      @warn "Size #{$size}px não está definido em $typography-sizes."
+   }
+}
