@@ -1,8 +1,4 @@
-//base
 @use "base/main";
-
-//util
 @use "util/util";
-
-//layout
+@use "components/components";
 @use "layouts/layouts";

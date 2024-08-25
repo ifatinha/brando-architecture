@@ -1,3 +1,16 @@
 @use "sass:map";
 
-$theme-color:();
+$theme-color:(
+    absolute-black: #000000,
+    charcoal : #626262,
+    dim-gray: #a9a9a9,
+    extra-light-gray : #f7f7f7,
+    dark-gray : #404040,
+    intense-red : #e31d3b,
+    light-gray : #c5c5c5,
+    medium-gray : #9b9b9b,
+    pure-white : #ffffff,
+    pale-gray : #ababab,
+    steel-gray: #727272,
+    velvety-black : #272727,
+    );

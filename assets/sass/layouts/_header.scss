@@ -1,9 +1,12 @@
-@use "./../util/util";
+@use "../util/util";
+@use "../global/colors";
 
-header {
-    background-color: darkblue;
+.header {
+    height  : 100%;
+    position: relative;
+    width   : 100%;
 
-    @include util.devices(l) {
-        background-color: darkcyan
-    }
+    background-color: palevioletred;
+
+    @include util.devices(l) {}
 }

@@ -1,0 +1,53 @@
+@use "../global/colors";
+@use "../global/mixins";
+
+.menu-bugger {
+    @include mixins.display-flex(center, center);
+    background: rgba(0, 0, 0, .6);
+    border    : none;
+    cursor    : pointer;
+    min-height: 36px;
+    left      : 60px;
+    outline   : none;
+    padding   : 6px 6px;
+    position  : fixed;
+    top       : 60px;
+    transition: .3s ease-in-out;
+    z-index   : 10000;
+    min-width : 38px;
+
+    &:hover {
+        opacity: .8;
+    }
+
+    &__bar {
+        background-color: map-get($map: colors.$theme-color, $key: pure-white);
+        display         : block;
+        height          : 3px;
+        position        : relative;
+        width           : 100%;
+
+        &::before,
+        &::after {
+            background-color: map-get($map: colors.$theme-color, $key: pure-white);
+            content         : "";
+            display         : block;
+            height          : 100%;
+            left            : 0;
+            position        : absolute;
+            width           : 100%;
+        }
+
+        &::before {
+            transform: translate(0, -10px);
+        }
+
+        &::after {
+            transform: translate(0, 10px);
+        }
+    }
+}
+
+.visually-hidden {
+    display: none;
+}
