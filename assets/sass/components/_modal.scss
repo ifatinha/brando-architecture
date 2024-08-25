@@ -97,3 +97,11 @@
 .open-modal {
     left: 60px !important;
 }
+
+.active-menu {
+    color: map-get($map: colors.$theme-color, $key: velvety-black);
+
+    span {
+        color: map-get($map: colors.$theme-color, $key: intense-red);
+    }
+}
