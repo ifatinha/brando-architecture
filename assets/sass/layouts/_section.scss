@@ -1,0 +1,10 @@
+@use "../global/mixins";
+@use "../util/queries";
+
+.section {
+    @include mixins.grid(1fr 1fr);
+
+    @include queries.devices(m) {
+        grid-template-columns: 1fr;
+    }
+}
