@@ -1,10 +1,22 @@
 @use "../global/mixins";
 @use "../util/queries";
+@use "../global/colors";
+@use "../global/typography";
 
 .section {
     @include mixins.grid(1fr 1fr);
 
     @include queries.devices(m) {
         grid-template-columns: 1fr;
+    }
+
+    &__image {
+        position: relative;
+
+        span {
+            @include typography.font(100);
+            font-weight: 700;
+            position   : absolute;
+        }
     }
 }
