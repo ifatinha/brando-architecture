@@ -25,17 +25,17 @@
         }
 
         &:nth-child(1) {
-            @include mixins.background("../images/carousel-01.jpg");
+            @include mixins.linear-bg("../images/carousel-01.jpg");
             z-index: 3;
         }
 
         &:nth-child(2) {
-            @include mixins.background("../images/carousel-02.jpg");
+            @include mixins.linear-bg("../images/carousel-02.jpg");
             z-index: 2;
         }
 
         &:nth-child(3) {
-            @include mixins.background("../images/carousel-03.jpg");
+            @include mixins.linear-bg("../images/carousel-03.jpg");
             z-index: 1;
         }
     }

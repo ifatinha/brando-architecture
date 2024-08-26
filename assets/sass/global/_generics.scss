@@ -1,5 +1,12 @@
+@use "../global/colors";
+@use "../global/mixins";
+
 .container {
    margin   : 0 auto;
    max-width: 1200px;
    width    : 100%;
+}
+
+.bg-color {
+   @include mixins.bg-color(map-get($map: colors.$theme-color, $key: intense-red));
 }

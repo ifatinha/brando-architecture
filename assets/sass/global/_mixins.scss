@@ -9,9 +9,20 @@
     grid-template-columns: $grid-template-columns;
 }
 
-@mixin background($url) {
+@mixin linear-bg($url) {
     background         : linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url($url);
     background-repeat  : no-repeat;
     background-position: center;
     background-size    : cover;
+}
+
+@mixin background($url) {
+    background         : url($url);
+    background-repeat  : no-repeat;
+    background-position: center;
+    background-size    : cover;
+}
+
+@mixin bg-color($color) {
+    background-color: $color;
 }

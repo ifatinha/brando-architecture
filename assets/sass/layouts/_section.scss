@@ -2,6 +2,7 @@
 @use "../util/queries";
 @use "../global/colors";
 @use "../global/typography";
+@use "../global/placeholders"as *;
 
 .section {
     @include mixins.grid(1fr 1fr);
@@ -11,12 +12,73 @@
     }
 
     &__image {
+        overflow: hidden;
         position: relative;
+        z-index : -9999;
+
+        img {
+            height    : 100%;
+            object-fit: cover;
+        }
 
         span {
             @include typography.font(100);
-            font-weight: 700;
-            position   : absolute;
+            color         : map-get($map: colors.$theme-color, $key: pure-white);
+            font-weight   : 700;
+            letter-spacing: -5px;
+            position      : absolute;
+            right         : -7px;
+            top           : 70px;
+
+            @include queries.devices(m) {
+                top: 10px;
+            }
+        }
+    }
+
+    &__description {
+        padding: 100px 80px;
+
+        @include queries.devices(t) {
+            padding: 60px;
+        }
+
+        @include queries.devices(m) {
+            padding: 30px 15px;
+        }
+
+        h2 {
+            @include typography.font(36);
+            @extend %uppercase;
+            color         : map-get($map: colors.$theme-color, $key: dark-gray);
+            font-weight   : 700;
+            letter-spacing: 0.26px;
+            margin-bottom : 80px;
+
+            @include queries.devices(m) {
+                margin: 20px 0;
+            }
+
+            &::before {
+                content     : "/";
+                color       : map-get($map: colors.$theme-color, $key: intense-red);
+                font-weight : 700;
+                margin-right: 12px;
+            }
+        }
+
+        p {
+            @include typography.font(40);
+            @extend %uppercase;
+            color         : map-get($map: colors.$theme-color, $key: light-gray);
+            font-weight   : 700;
+            letter-spacing: 0.26px;
+            max-width     : 16ch;
+
+            @include queries.devices-t-and-m() {
+                font-size: 24px;
+                max-width: 100%;
+            }
         }
     }
 }
