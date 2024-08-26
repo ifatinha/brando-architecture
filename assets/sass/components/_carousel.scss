@@ -3,27 +3,44 @@
 @use "../global/typography";
 @use "../global/placeholders"as *;
 @use "../util/queries";
+@use "../global/prefixes";
 
 .carousel {
     height  : 100%;
     position: relative;
     width   : 100%;
-    z-index : -999;
 
     &__item {
-        height     : 100%;
-        // inset   : 0;
-        // position: absolute;
-        padding    : 0 60px;
-        width      : 100%;
+        height    : 100%;
+        inset     : 0;
+        opacity   : 0;
+        position  : absolute;
+        padding   : 0 60px;
+        transition: 1s ease-in-out;
+        width     : 100%;
+        z-index   : -1;
 
         @include queries.devices-t-and-m() {
             padding: 3%;
         }
+
+        &:nth-child(1) {
+            @include mixins.background("../images/carousel-01.jpg");
+            z-index: 3;
+        }
+
+        &:nth-child(2) {
+            @include mixins.background("../images/carousel-02.jpg");
+            z-index: 2;
+        }
+
+        &:nth-child(3) {
+            @include mixins.background("../images/carousel-03.jpg");
+            z-index: 1;
+        }
     }
 
     &__container {
-        background-color: bisque;
         @extend %uppercase;
         @include mixins.grid(100px auto);
         align-content: center;
@@ -84,4 +101,39 @@
             }
         }
     }
+
+    &__dots {
+        @include mixins.display-flex(center, center);
+        bottom    : 30px;
+        position  : absolute;
+        text-align: center;
+        width     : 100%;
+        z-index   : 9;
+
+        &-dot {
+            background: transparent;
+            border    : none;
+            cursor    : pointer;
+            display   : inline-block;
+            outline   : none;
+            padding   : 6px 5px;
+
+            span {
+                @include prefixes.prefix(box-shadow, 1px 1px 0 rgba(0, 0, 0, 0.1));
+                background: rgba(255, 255, 255, .5);
+                display   : block;
+                height    : 3px;
+                transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+                width     : 30px;
+            }
+        }
+    }
+}
+
+.active-dot {
+    background-color: map-get($map: colors.$theme-color, $key: pure-white) !important;
+}
+
+.active-carousel {
+    opacity: 1;
 }

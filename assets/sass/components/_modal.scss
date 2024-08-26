@@ -59,7 +59,7 @@
         max-width    : 156px;
 
         @include queries.devices(m) {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
     }
 
@@ -71,8 +71,8 @@
         width        : 100%;
 
         @include queries.devices(m) {
-            max-height: 170px !important;
-            padding   : 15px 0;
+            max-height: 220px !important;
+            padding   : 20px 0;
         }
 
         li {
