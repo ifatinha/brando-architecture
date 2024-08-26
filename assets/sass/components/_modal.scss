@@ -1,7 +1,7 @@
 @use "../global/colors";
 @use "../global/typography";
 @use "../global/mixins";
-
+@use "../util/queries";
 
 .modal {
     background-color: map-get($map: colors.$theme-color, $key: pure-white);
@@ -11,6 +11,11 @@
     transition      : .3s ease-in-out;
     width           : 245px;
     z-index         : 10001;
+
+    @include queries.devices(m) {
+        padding-bottom: 30px;
+        padding-top   : 30px;
+    }
 
     &__close-btn {
         @include typography.font(12);
@@ -52,14 +57,23 @@
     &-brand {
         margin-bottom: 40px;
         max-width    : 156px;
+
+        @include queries.devices(m) {
+            margin-bottom: 20px;
+        }
     }
 
     &-menu {
         border-top   : 1px solid rgba($color: #000000, $alpha: 0.1);
         border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
-        overflow     : hidden;
+        overflow     : auto;
         padding      : 30px 0;
         width        : 100%;
+
+        @include queries.devices(m) {
+            max-height: 170px !important;
+            padding   : 15px 0;
+        }
 
         li {
             margin: 8px 0;
@@ -84,6 +98,10 @@
         margin-top: 30px;
         width     : 100%;
 
+        @include queries.devices(m) {
+            margin-bottom: 1rem;
+        }
+
         li {
             a {
                 color  : map-get($map: colors.$theme-color, $key: charcoal);
@@ -96,6 +114,10 @@
 
 .open-modal {
     left: 60px !important;
+
+    @include queries.devices-t-and-m {
+        left: 0 !important;
+    }
 }
 
 .active-menu {

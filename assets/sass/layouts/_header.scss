@@ -2,11 +2,5 @@
 @use "../global/colors";
 
 .header {
-    height  : 100%;
-    position: relative;
-    width   : 100%;
-
-    background-color: palevioletred;
-
-    @include util.devices(l) {}
+    position: fixed;
 }

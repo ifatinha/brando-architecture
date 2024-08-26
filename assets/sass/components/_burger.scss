@@ -1,5 +1,6 @@
 @use "../global/colors";
 @use "../global/mixins";
+@use "../util/queries";
 
 .menu-bugger {
     @include mixins.display-flex(center, center);
@@ -15,6 +16,11 @@
     transition: .3s ease-in-out;
     z-index   : 10000;
     min-width : 38px;
+
+    @include queries.devices-t-and-m() {
+        left: 3%;
+        top : 3%;
+    }
 
     &:hover {
         opacity: .8;

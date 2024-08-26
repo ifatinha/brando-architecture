@@ -3,3 +3,8 @@
     display        : flex;
     justify-content: $justify-content;
 }
+
+@mixin grid($grid-template-columns) {
+    display              : grid;
+    grid-template-columns: $grid-template-columns;
+}

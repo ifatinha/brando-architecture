@@ -21,3 +21,14 @@ $t-device: 768px;
       }
    }
 }
+
+@mixin devices-t-and-m {
+
+   @include devices(t) {
+      @content;
+   }
+
+   @include devices(m) {
+      @content;
+   }
+}
