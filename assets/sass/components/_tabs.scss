@@ -1,0 +1,72 @@
+@use "../global/colors";
+@use "../global/typography";
+@use "../global/mixins";
+@use "../global/placeholders"as *;
+@use "../util/queries";
+
+.tab {
+    width: 100%;
+
+    &__list {
+        @include mixins.grid(repeat(3, 1fr));
+        justify-items: start;
+
+        margin-bottom   : 10%;
+        width           : 100%;
+        background-color: rebeccapurple;
+
+        @include queries.devices(t) {
+            margin-bottom: 5%;
+        }
+
+        @include queries.devices(m) {
+            grid-template-columns: 1fr;
+            gap                  : 10px;
+        }
+
+        &-button {
+            @include typography.font(14);
+            @extend %uppercase;
+            color      : map-get($map: colors.$theme-color, $key: steel-gray);
+            display    : inline-block;
+            font-weight: 600;
+            padding    : 10px 0;
+            position   : relative;
+            transition : .3s ease-in-out;
+
+            background-color: darkgray;
+
+            &::after {
+                background: map-get($map: colors.$theme-color, $key: intense-red);
+                bottom    : 0;
+                content   : "";
+                height    : 2px;
+                left      : 0;
+                position  : absolute;
+                transition: .3s ease-in-out;
+                width     : 0;
+            }
+
+            &:hover {
+                color: map-get($map: colors.$theme-color, $key: velvety-black);
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+
+    &__contents {
+        display : none;
+        position: relative;
+    }
+}
+
+.tab__button-active {
+    color: map-get($map: colors.$theme-color, $key: velvety-black);
+
+    &::after {
+        width: 100%;
+    }
+}
