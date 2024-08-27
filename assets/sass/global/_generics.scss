@@ -1,9 +1,10 @@
 @use "../global/colors";
 @use "../global/mixins";
+@use "../util/queries";
 
 .container {
    margin   : 0 auto;
-   max-width: 1200px;
+   max-width: 1170px;
    width    : 100%;
 }
 
