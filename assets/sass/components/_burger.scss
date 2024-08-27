@@ -8,13 +8,13 @@
     border    : none;
     cursor    : pointer;
     min-height: 36px;
+    min-width : 38px;
     left      : 60px;
     outline   : none;
     padding   : 6px 6px;
     position  : fixed;
     top       : 60px;
     transition: .3s ease-in-out;
-    min-width : 38px;
 
     @include queries.devices-t-and-m() {
         left: 3%;

@@ -6,11 +6,11 @@
 .modal {
     background-color: map-get($map: colors.$theme-color, $key: pure-white);
     left            : -300px;
-    position        : relative;
+    position        : fixed;
     padding         : 60px 30px;
     transition      : .3s ease-in-out;
     width           : 245px;
-    z-index         : 10001;
+    z-index         : 10000;
 
     @include queries.devices(m) {
         padding-bottom: 30px;

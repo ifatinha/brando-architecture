@@ -1,7 +1,8 @@
 @use "../util/util";
 @use "../global/colors";
+@use "../util/queries";
 
 .header {
-    position: fixed;
-    z-index : 10000;
+    position        : fixed;
+    z-index         : 10000;
 }

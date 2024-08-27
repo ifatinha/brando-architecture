@@ -46,7 +46,7 @@
     &__enterprise {
         @include typography.font(12);
         @extend %uppercase;
-        color      : map-get($map: colors.$theme-color, $key: charcoal);
+        color      : map-get($map: colors.$theme-color, $key: absolute-black);
         display    : block;
         font-weight: 500;
     }
