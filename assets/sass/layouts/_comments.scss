@@ -1,0 +1,14 @@
+@use "../global/colors";
+@use "../global/mixins";
+@use "../util/queries";
+
+#comments {
+    @include mixins.bg-color(map-get($map: colors.$theme-color, $key: soft-snow));
+
+    @include queries.devices(l) {
+        padding-left : 60px;
+        padding-right: 60px;
+    }
+}
+
+.comments {}
