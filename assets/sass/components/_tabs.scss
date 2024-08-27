@@ -12,11 +12,11 @@
         @include mixins.display-flex(center, start);
         flex-wrap    : wrap;
         gap          : 26px;
-        margin-bottom: 10%;
+        margin-bottom: 8%;
         width        : 100%;
 
         @include queries.devices(t) {
-            margin-bottom: 5%;
+            margin-bottom: 4%;
         }
 
         @include queries.devices(m) {
@@ -80,7 +80,7 @@
                 @include typography.font-secondary(14);
                 color        : map-get($map: colors.$theme-color, $key: charcoal);
                 line-height  : 24px;
-                margin-bottom: 24px;
+                margin-bottom: 20px;
                 width        : 78%;
 
                 @include queries.devices-t-and-m() {
