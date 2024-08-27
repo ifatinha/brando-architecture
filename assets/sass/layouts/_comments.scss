@@ -1,6 +1,8 @@
 @use "../global/colors";
 @use "../global/mixins";
 @use "../util/queries";
+@use "../global/typography";
+@use "../global/placeholders"as *;
 
 #comments {
     @include mixins.bg-color(map-get($map: colors.$theme-color, $key: soft-snow));
@@ -11,4 +13,90 @@
     }
 }
 
-.comments {}
+.comments {
+    width: 100%;
+
+    &__list {
+        @include mixins.display-flex(start, center);
+        flex-direction: column;
+        gap           : 16px;
+
+        &-item {
+            @include mixins.display-flex(center, space-around);
+            gap: 2rem;
+        }
+    }
+}
+
+.comment__item-img {
+    flex  : 0 0 70px;
+    height: 70px;
+
+    @include queries.devices(l) {
+        flex-basis: 90px;
+        height    : 90px;
+    }
+
+    img {
+        height    : 100%;
+        object-fit: cover;
+        width     : 100%;
+    }
+}
+
+.comment__item-desc {
+    @include mixins.display-flex(start, center);
+    flex-direction: column;
+}
+
+.comment__item-quote {
+    flex         : 1 1 50px;
+    height       : 50px;
+    margin-bottom: 10px;
+    position     : relative;
+    width        : 50px;
+
+    &::before {
+        @include typography.font(100);
+        content   : "“";
+        color     : map-get($map: colors.$theme-color, $key: intense-red);
+        left      : 0;
+        position  : absolute;
+        text-align: center;
+        top       : -10px;
+    }
+}
+
+.comment__item-description {
+    p {
+        @include typography.font(14);
+        color         : map-get($map: colors.$theme-color, $key: charcoal);
+        font-weight   : 500;
+        letter-spacing: 0.26px;
+        line-height   : 22px;
+        margin-bottom : 10px;
+        width         : 100%;
+
+        @include queries.devices(l) {
+            max-width: 300px;
+        }
+    }
+}
+
+.comment__item-author {
+    p {
+        @include typography.font(14);
+        @extend %uppercase;
+        color        : map-get($map: colors.$theme-color, $key: absolute-black);
+        font-weight  : 600;
+        margin-bottom: 6px;
+    }
+}
+
+.comment__item-enterprise {
+    span {
+        @include typography.font(12);
+        @extend %uppercase;
+        color: map-get($map: colors.$theme-color, $key: pale-gray);
+    }
+}
