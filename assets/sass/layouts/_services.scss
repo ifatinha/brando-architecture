@@ -1,0 +1,68 @@
+@use "../global/mixins";
+@use "../util/queries";
+@use "../global/colors";
+@use "../global/typography";
+@use "../global/placeholders"as *;
+
+.services__container {
+    padding: 40px 0;
+    width  : 100%;
+
+    @include queries.devices(l) {
+        padding: 120px 0;
+    }
+
+    @include queries.devices(t) {
+        padding: 80px 0;
+    }
+
+    &-row {
+        @include mixins.grid(1fr);
+        gap: 20px;
+
+        @include queries.devices(l) {
+            grid-template-columns: repeat(4, 1fr);
+            gap                  : 20px;
+        }
+
+        @include queries.devices(t) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+.services__container-item {
+    width: 100%;
+
+    h1 {
+        @include typography.font(16);
+        @extend %uppercase;
+        color         : map-get($map: colors.$theme-color, $key: dark-gray);
+        font-weight   : 600;
+        letter-spacing: 0.26px;
+        margin-bottom : 1rem;
+
+        span {
+            color: map-get($map: colors.$theme-color, $key: intense-red);
+        }
+    }
+
+    img {
+        display   : block;
+        object-fit: cover;
+    }
+
+    p {
+        @include typography.font-secondary(14);
+        color      : map-get($map: colors.$theme-color, $key: charcoal);
+        line-height: 22px;
+        margin     : 10px 0 30px;
+    }
+
+    &>span {
+        background: map-get($map: colors.$theme-color, $key: intense-red);
+        display   : block;
+        height    : 4px;
+        width     : 30px;
+    }
+}

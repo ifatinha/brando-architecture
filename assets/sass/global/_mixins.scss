@@ -26,3 +26,9 @@
 @mixin bg-color($color) {
     background-color: $color;
 }
+
+@mixin container($max-width) {
+    margin   : 0 auto;
+    max-width: $max-width;
+    width    : 100%;
+}
