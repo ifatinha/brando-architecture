@@ -58,11 +58,4 @@
         line-height: 22px;
         margin     : 10px 0 30px;
     }
-
-    &>span {
-        background: map-get($map: colors.$theme-color, $key: intense-red);
-        display   : block;
-        height    : 4px;
-        width     : 30px;
-    }
 }

@@ -12,3 +12,10 @@
 .bg-color {
    @include mixins.bg-color(map-get($map: colors.$theme-color, $key: intense-red));
 }
+
+.red-line {
+   background: map-get($map: colors.$theme-color, $key: intense-red);
+   display   : block;
+   height    : 4px;
+   width     : 30px;
+}

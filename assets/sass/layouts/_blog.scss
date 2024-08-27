@@ -1,0 +1,104 @@
+@use "../global/typography";
+@use "../global/colors";
+@use "../global/mixins";
+@use "../util/queries";
+@use "../global/placeholders"as *;
+
+.blog__container {
+    width: 100%;
+
+    &-row {
+        @include mixins.grid(repeat(4, 1fr));
+
+        @include queries.devices(m) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &-item {
+        @include queries.devices(m) {
+            &:nth-child(1) {
+                order: 1;
+            }
+
+            &:nth-child(2) {
+                order: 2;
+            }
+
+            &:nth-child(3) {
+                order: 4;
+            }
+
+            &:nth-child(4) {
+                order: 3;
+            }
+
+            &:nth-child(5) {
+                order: 6;
+            }
+
+            &:nth-child(6) {
+                order: 5;
+            }
+
+            &:nth-child(7) {
+                order: 7;
+            }
+
+            &:nth-child(8) {
+                order: 8;
+            }
+        }
+    }
+}
+
+.blog__item-img {
+    overflow: hidden;
+
+    img {
+        display   : block;
+        height    : 100%;
+        object-fit: contain;
+        transition: 1s ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.blog__item-description {
+    @include mixins.display-flex(start, center);
+    flex-direction: column;
+    height        : 100%;
+    padding       : 10px;
+
+    @include queries.devices(l) {
+        padding: 30px;
+    }
+
+    @include queries.devices(t) {
+        padding: 20px;
+    }
+
+    span {
+        @include typography.font(12);
+        @extend %uppercase;
+        color      : map-get($map: colors.$theme-color, $key: pale-gray);
+        font-weight: 500;
+    }
+
+    p {
+        @include typography.font(16);
+        @extend %uppercase;
+        color      : map-get($map: colors.$theme-color, $key: charcoal);
+        font-weight: 600;
+        margin     : 7% 0;
+
+
+        @include queries.devices-t-and-m() {
+            font-size: 12px;
+            height   : auto;
+        }
+    }
+}
