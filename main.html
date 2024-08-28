@@ -387,10 +387,63 @@
     <section class="container">
         <div class="container__row">
             <div class="container__column">
-                formulario
+                <div class="contact__form">
+                    <form action="#">
+                        <div class="contact__form-item">
+                            <input type="text" placeholder="Seu nome">
+                        </div>
+                        <div class="contact__form-item">
+                            <input type="email" placeholder="Seu e-mail">
+                        </div>
+                        <div class="contact__form-item">
+                            <select name="interesse" id="interesse">
+                                <option value="pensando">No que você está pensando</option>
+                                <option value="arquitetura">Arquitetura</option>
+                                <option value="civilAndEstrutural">Civil & Estrutural</option>
+                                <option value="paisagismo">Paisagismo</option>
+                                <option value="planejamentoUrbano">Planejamento Urbano</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        <div class="contact__form-item">
+                            <textarea name="mensagem" id="mensagem" rows="5" placeholder="Sua mensagem"></textarea>
+                        </div>
+                        <div class="contact__form-item">
+                            <button type="button">Enviar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="bg-color container__column">
-                contato
+            <div class="bg-color container__column" id="contact-list">
+                <ul class="contact__list">
+                    <li>
+                        <div class="contact__list-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact__list-description">
+                            <p>Nosso estudio</p>
+                            <address>245, Centro, Serra Grande - PB</address>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact__list-icon">
+                            <i class="fa-solid fa-clipboard"></i>
+                        </div>
+                        <div class="contact__list-description">
+                            <p>Consultas gerais</p>
+                            <span>branco@contato.com.br</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact__list-icon">
+                            <i class="fa-solid fa-mobile"></i>
+                        </div>
+                        <div class="contact__list-description">
+                            <p>Ligue para nós hoje mesmo</p>
+                            <span>+55 (83) 98765-4321</span>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>

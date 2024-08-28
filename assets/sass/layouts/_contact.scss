@@ -1,0 +1,125 @@
+@use "../global/colors";
+@use "../global/typography";
+@use "../global/mixins";
+@use "../global/placeholders"as *;
+@use "../util/queries";
+
+.contact__form {
+    width           : 100%;
+
+    @include queries.devices(l) {
+        padding: 0 90px;
+    }
+
+    &-item {
+
+        width: 100%;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+            margin-bottom: 20px;
+        }
+
+        input,
+        select,
+        textarea {
+            @include typography.font(14);
+            @extend %uppercase;
+            border     : 2px solid rgba(0, 0, 0, .1);
+            color      : map-get($map: colors.$theme-color, $key: charcoal);
+            font-weight: 500;
+            outline    : none;
+            padding    : 12px 15px;
+            resize     : none;
+            transition : .3s ease-in-out;
+            width      : 100%;
+
+            &:focus {
+                border-color: map-get($map: colors.$theme-color, $key: charcoal);
+            }
+
+            &::placeholder {
+                color: map-get($map: colors.$theme-color, $key: charcoal);
+            }
+        }
+
+        button {
+            @include typography.font(14);
+            @extend %uppercase;
+            border     : 2px solid map-get($map: colors.$theme-color, $key: absolute-black);
+            background : map-get($map: colors.$theme-color, $key: absolute-black);
+            color      : map-get($map: colors.$theme-color, $key: pure-white);
+            cursor     : pointer;
+            display    : inline-block;
+            font-weight: 600;
+            padding    : 12px 16px;
+        }
+    }
+}
+
+.contact__list {
+    @include mixins.display-flex(center, center);
+    gap  : 1rem;
+    width: 100%;
+
+    @include queries.devices(l) {
+        flex-direction: column;
+    }
+
+    @include queries.devices(m) {
+        flex-direction: column;
+        gap           : 0;
+    }
+
+    li {
+        @include mixins.display-flex(center, start);
+        color: map-get($map: colors.$theme-color, $key: pure-white);
+        gap  : 1rem;
+        width: 100%;
+
+        @include queries.devices(l) {
+            gap: 32px;
+        }
+
+        &:nth-child(2) {
+            margin: 20px 0;
+
+            @include queries.devices(l) {
+                margin: 40px 0;
+            }
+        }
+    }
+
+    &-icon {
+        font-size: 30px;
+        display  : inline-block;
+
+        @include queries.devices(l) {
+            @include typography.font(40);
+        }
+    }
+
+    &-description {
+        @extend %uppercase;
+
+        p {
+            @include typography.font(16);
+            font-weight: 700;
+            line-height: 22px
+        }
+
+        address,
+        span {
+            @include typography.font(14);
+            font-weight: 500;
+            line-height: 24px;
+        }
+
+    }
+}
+
+#contact-list {
+    @include mixins.display-flex(center, center);
+}
