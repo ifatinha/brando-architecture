@@ -1,0 +1,43 @@
+@use "../util/queries";
+@use "../global/colors";
+@use "../global/typography";
+
+#projects {
+    .section__image {
+        min-height: 75vh;
+    }
+}
+
+.projects__list {
+    bottom  : 40px;
+    width   : 300px;
+    position: absolute;
+    right   : 40px;
+    z-index : -9999;
+
+    @include queries.devices-t-and-m() {}
+
+    li {
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+        text-align   : right;
+        width        : 100%;
+
+        a {
+            @include typography.font(16);
+            color         : map-get($map: colors.$theme-color, $key: pure-white);
+            cursor        : pointer;
+            display       : inline-block;
+            font-weight   : 600;
+            letter-spacing: 0.26px;
+            line-height   : 18px;
+            padding       : 16px;
+            text-transform: uppercase;
+            transition    : .3s ease-in-out;
+            width         : 100%;
+
+            &:hover {
+                color: map-get($map: colors.$theme-color, $key: velvety-black);
+            }
+        }
+    }
+}
