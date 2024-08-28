@@ -6,7 +6,7 @@
 
 .team {
     overflow: hidden;
-    padding : 130px 2%;
+    padding : 130px 2% 0;
     width   : 100%;
 
     @include queries.devices-t-and-m() {
@@ -28,11 +28,11 @@
 .team__info {
     min-height: 280px;
     overflow  : hidden;
-    padding   : 15px;
+    padding   : 0 15px;
     position  : relative;
 
     &:hover .team__info-description {
-        bottom : 15px;
+        bottom : 0;
         opacity: 1;
     }
 
@@ -49,12 +49,12 @@
         color     : map-get($map: colors.$theme-color, $key: pure-white);
         left      : 0;
         margin    : 0 auto;
-        width     : 240px;
+        width     : 318px;
         opacity   : 1;
-        padding   : 26px;
+        padding   : 20px;
         position  : absolute;
         right     : 0;
-        transition: all 400ms ease-out 0s;
+        transition: all .7s ease-out 0s;
 
         @include queries.devices-t-and-m() {
             padding: 20px;
