@@ -1,0 +1,110 @@
+@use "../global/mixins";
+@use "../util/queries";
+@use "../global/placeholders"as *;
+@use "../global/colors";
+@use "../global/typography";
+
+.team {
+    overflow: hidden;
+    padding : 130px 2%;
+    width   : 100%;
+
+    @include queries.devices-t-and-m() {
+        padding-top   : 40px;
+        padding-bottom: 40px;
+    }
+
+    &__container {
+        @include mixins.grid(repeat(3, 1fr));
+        overflow: hidden;
+
+        @include queries.devices(m) {
+            grid-template-columns: 1fr;
+            gap                  : 15px;
+        }
+    }
+}
+
+.team__info {
+    min-height: 280px;
+    overflow  : hidden;
+    padding   : 15px;
+    position  : relative;
+
+    &:hover .team__info-description {
+        bottom : 15px;
+        opacity: 1;
+    }
+
+    img {
+        display        : block;
+        height         : 100%;
+        object-fit     : cover;
+        object-position: center;
+    }
+
+    &-description {
+        background: rgba(227, 29, 59, .9);
+        bottom    : -360px;
+        color     : map-get($map: colors.$theme-color, $key: pure-white);
+        left      : 0;
+        margin    : 0 auto;
+        width     : 240px;
+        opacity   : 1;
+        padding   : 26px;
+        position  : absolute;
+        right     : 0;
+        transition: all 400ms ease-out 0s;
+
+        @include queries.devices-t-and-m() {
+            padding: 20px;
+            width  : 100% !important;
+        }
+
+        @include queries.landscape() {
+            width: 100%;
+        }
+
+        h3 {
+            @include typography.font(14);
+            @extend %uppercase;
+            font-weight: 600;
+            line-height: 22px;
+        }
+
+        span {
+            @include typography.font(12);
+            @extend %uppercase;
+            font-weight: 500;
+            line-height: 20px;
+        }
+
+        p {
+            @include typography.font-secondary(14);
+            line-height: 24px;
+            margin     : 12px 0;
+        }
+
+        ul {
+            @include mixins.display-flex(center, start);
+            flex-wrap: wrap;
+            gap      : 8px;
+
+            li {
+                color: map-get($map: colors.$theme-color, $key: velvety-black);
+            }
+
+            a {
+                @include typography.font(12);
+                @extend %uppercase;
+                color      : map-get($map: colors.$theme-color, $key: velvety-black);
+                font-weight: 500;
+                transition : .3s ease-in-out;
+
+                &:hover {
+                    color: map-get($map: colors.$theme-color, $key: pure-white);
+                }
+            }
+        }
+    }
+}

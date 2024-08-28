@@ -32,3 +32,9 @@ $t-device: 768px;
       @content;
    }
 }
+
+@mixin landscape() {
+   @media only screen and (orientation: landscape) and (max-width: ($l-device)) {
+      @content
+   }
+}
