@@ -9,526 +9,447 @@
     <meta name="description" content="Description your page">
     <meta name="keywords" content="architecture, desing, house, project, build">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="assets/images/letra-b.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <title>Brando Architecture</title>
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <div class="logo">
-                <img src="assets/images/logo-red.png.webp" alt="BRANDO Architecture Logo" width="182" height="42">
-            </div>
+    <header class="header">
+        <button type="button" class="menu-bugger" aria-label="Abrir menu" id="open-modal">
+            <!-- <span class="visually-hidden">Menu</span> -->
+            <i class="menu-bugger__bar" aria-hidden="true"></i>
+        </button>
 
-            <nav class="header-menu">
-                <a href="#about">About</a>
-                <a href="#service">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#team">Team</a>
-                <a href="#blog">Blog</a>
-                <a href="#contact">Contact</a>
+        <div class="modal" id="modal">
+            <button class="modal__close-btn" type="button" aria-label="Fechar Menu" id="close-modal"></button>
+            <nav class="modal__navbar">
+
+                <img class="modal__navbar-brand" src="assets/images/logo-red.png.webp" alt="Brand Logo" width="324"
+                    height="72">
+
+                <ul class="modal__navbar-menu">
+                    <li><a href="#about" tabindex="0"><span>01</span> About</a></li>
+                    <li><a href="#service" tabindex="0"><span>02</span> Service</a></li>
+                    <li><a href="#projects" tabindex="0"><span>03</span> Projects</a></li>
+                    <li><a href="#people" tabindex="0"><span>04</span> People</a></li>
+                    <li><a href="#blog" tabindex="0"><span>05</span> Blog</a></li>
+                    <li><a href="#contact" tabindex="0"><span>06</span> Contact</a></li>
+                </ul>
+
+                <ul class="modal__navbar-social">
+                    <li>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" aria-label="Linkedin">
+                            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
             </nav>
-
-            <div class="menu-mobile">
-                <div class="line"></div>
-                <div class="line1"></div>
-                <div class="line2"></div>
-            </div>
         </div>
     </header>
 
-    <main class="introducao">
-        <div class="introducao-texto">
-            <p>Architecture is inhabited sculpture</p>
-            <h1>The mother <br>
-                art is <br>
-                Architecture</h1>
-        </div>
-    </main>
-
-    <section id="about">
-        <div class="container">
-            <div class="container-item imagem-bg sobre-bg">
-                <div class="number">
-                    <p>01</p>
+    <div class="carousel">
+        <div class="carousel__item">
+            <div class="carousel__container">
+                <div class="carousel__container-line"></div>
+                <div class="carousel__container-desc">
+                    <p>Architecture is inhabited sculpture.</p>
+                    <span>The mother art is architecture</span>
                 </div>
             </div>
-            <div class="container-item">
-                <h2 class="texto-transform"><span>/</span>About</h2>
-                <p class="texto-transform paragrafo">
-                    We Believe in the power of desing, the strength of strategy.
-                </p>
+        </div>
+        <div class="carousel__item">
+            <div class="carousel__container">
+                <div class="carousel__container-line"></div>
+                <div class="carousel__container-desc">
+                    <p>Architecture is inhabited sculpture.</p>
+                    <span>Architecture is the learned game</span>
+                </div>
             </div>
         </div>
-        <div class="container-bottom">
-            <div class="item-bottom">
-                <div class="container-links">
-                    <a href="./index.html" class="texto-transform">Creativity</a>
-                    <a href="./index.html" class="texto-transform">Inovation</a>
-                    <a href="./index.html" class="texto-transform">Point of View</a>
+        <div class="carousel__item">
+            <div class="carousel__container">
+                <div class="carousel__container-line"></div>
+                <div class="carousel__container-desc">
+                    <p>Architecture is inhabited sculpture.</p>
+                    <span>A house is a machine for living in</span>
                 </div>
-
-                <p class="container-paragrafo">Lorem Ipsum is simply dummy text of the printing & typesetting
-                    industry. Lorem Ipsum has been the industry’s standard dummy. Lorem Ipsum is simply dummy text
-                    of the printing & typesetting industry. Lorem Ipsum has been the industry’s standard dummy.
-                </p>
-
-                <p class="container-paragrafo">Lorem Ipsum is simply dummy text of the printing & typesetting
-                    industry. Lorem Ipsum has been the industry’s standard dummy. Lorem Ipsum is simply dummy text
-                    of the printing & typesetting industry. Lorem Ipsum has been the industry’s standard dummy.
-                </p>
             </div>
+        </div>
+        <div class="carousel__dots">
+            <button class="carousel__dots-dot" aria-label="Próximo Slide">
+                <span class="active-dot"></span>
+            </button>
+            <button class="carousel__dots-dot" aria-label="Próximo Slide">
+                <span></span>
+            </button>
+            <button class="carousel__dots-dot" aria-label="Próximo Slide">
+                <span></span>
+            </button>
+        </div>
+    </div>
 
-            <div class="item-bottom vermelho">
-                <p class="container-citacao">
-                    We see our customers as invited guests to a party, and we are the
-                    hosts. It's our job every day to make every important aspect of the
-                    customer experience a little bit better.
-                </p>
-                <p class="texto-transform citacao-autor">Shoko Mugikura</p>
-                <p class="texto-transform citacao-empresa">Microsoft INC</p>
+    <section class="section" id="about">
+        <div class="section__image">
+            <img src="./assets/images/about-section.jpg" alt="Imagem de prédios">
+            <span>01</span>
+        </div>
+        <div class="section__description">
+            <h2>Sobre</h2>
+            <p>Acreditamos no poder do design e na força da estratégia.</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="container__row">
+            <div class="container__column">
+                <div class="tab">
+                    <ul class="tab__list">
+                        <li><button type="submit" class="tab__list-button">Criatividade</button></li>
+                        <li><button type="submit" class="tab__list-button">Inovação</button></li>
+                        <li><button type="submit" class="tab__list-button">Ponto de vista</button></li>
+                    </ul>
+                    <div class="tab__contents">
+                        <div class="tab__contents-item tab__content-active">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor, turpis vel
+                                condimentum consectetur, ex leo finibus ante, quis tincidunt nisi massa quis enim.
+                                Praesent venenatis at tellus nec tristique. Donec sit amet ante consectetur, vehicula
+                                risus a, egestas erat. Donec in bibendum urna.</p>
+                            <p>Donec sed varius sem. Maecenas dapibus nibh mi, vel ultrices lacus lacinia non.
+                                Pellentesque auctor tincidunt mattis. Quisque commodo rhoncus augue, et varius sapien
+                                dignissim a. Nulla nec ipsum eleifend, dignissim arcu at, euismod mauris. Integer luctus
+                                risus quis nisl rhoncus pretium. Nam tincidunt, augue at vehicula dapibus, quam leo
+                                facilisis elit, ut lobortis dui lorem nec mauris.
+                            </p>
+                        </div>
+                        <div class="tab__contents-item">
+                            <p>Aenean elementum purus in urna faucibus, at lobortis eros tempor. Aliquam a tincidunt
+                                felis, nec ultricies enim. Duis at vulputate erat. Phasellus sagittis ullamcorper neque.
+                                Nullam vulputate massa eget pellentesque vestibulum. Praesent mollis, est sed mollis
+                                posuere, justo nulla varius mi, nec ultricies tortor velit sit amet sapien. In vel
+                                dignissim dui.
+                            </p>
+                            <p>Aliquam erat volutpat. Maecenas non ipsum vestibulum, vehicula leo a, consectetur risus.
+                                Etiam egestas euismod augue, sed commodo libero vehicula a. Pellentesque eget pretium
+                                augue. Proin cursus augue quam, sit amet finibus dui iaculis ut. Quisque sagittis arcu
+                                vel felis tincidunt porttitor. Suspendisse potenti.</p>
+                        </div>
+                        <div class="tab__contents-item">
+                            <p>Ut hendrerit diam ornare nibh cursus, a tincidunt arcu viverra. Duis at ante eget nulla
+                                lacinia placerat a eget magna. Etiam mattis neque eros, ac facilisis augue aliquam vel.
+                                Pellentesque dui dolor, venenatis non elementum ac, ullamcorper sit amet velit. Integer
+                                non dolor mattis lectus porta gravida.</p>
+                            <p>Vivamus ac dictum ipsum. Nulla auctor lacinia nisi vitae laoreet. Duis ornare dapibus
+                                neque, tempus fringilla dolor iaculis porttitor. Vestibulum varius purus sed tincidunt
+                                ullamcorper. Ut vitae dui lacus. Etiam dolor mi, imperdiet non neque sed, euismod
+                                finibus massa. Nam sagittis erat turpis, ac convallis lectus mattis eu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-color container__column">
+                <div class="quote">
+                    <div class="quote__icon"></div>
+                    <p class="quote__description">Vemos nossos clientes como convidados em uma festa, e nós somos os
+                        anfitriões. É nosso trabalho, todos os dias, melhorar um pouco cada aspecto importante da
+                        experiência do cliente.
+                    </p>
+                    <span class="quote__author">Shoko Mugikura</span>
+                    <span class="quote__enterprise">Microsoft INC</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="service">
-        <div class="container">
-            <div class="container-item imagem-bg servicos-bg">
-                <div class="number">
-                    <p>02</p>
-                </div>
-            </div>
-            <div class="container-item">
-                <h2 class="texto-transform"><span>/</span>Service</h2>
-                <p class="texto-transform paragrafo">
-                    Brando is one of the World’s leading global architecture and desing.
-                </p>
-            </div>
+    <section class="section" id="service">
+        <div class="section__image">
+            <img src="./assets/images/service-section.jpg" alt="Imagem de prédios">
+            <span>02</span>
         </div>
+        <div class="section__description">
+            <h2>Serviços</h2>
+            <p>Brando é líder mundial em arquitetura e design.</p>
+        </div>
+    </section>
 
-        <div class="servicos-container">
-            <div class="servicos-item">
-                <p class="texto-transform"><span>01. </span>Architecture</p>
-
-                <img src="assets/images/architecture-img6.jpg.webp" alt="Architecture" width="800" height="435">
-
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    the industry.
+    <section class="services__container">
+        <div class="container services__container-row">
+            <div class="services__container-item">
+                <h1><span>01.</span> Arquitetura</h1>
+                <div>
+                    <img src="assets/images/architecture-service.jpg" alt="Architecture">
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry.
                 </p>
-
-                <hr class="hr">
+                <div class="red-line"></div>
             </div>
-
-            <div class="servicos-item">
-                <p class="texto-transform"><span>02. </span>Civil & Structural</p>
-
-                <img src="assets/images/architecture-img7.jpg.webp" alt="Architecture" width="800" height="435">
-
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    the industry.
+            <div class="services__container-item">
+                <h1><span>02.</span> Civil & Estrutural</h1>
+                <div>
+                    <img src="assets/images/structural-service.jpg" alt="Architecture">
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry.
                 </p>
-
-                <hr class="hr">
+                <div class="red-line"></div>
             </div>
-
-            <div class="servicos-item">
-                <p class="texto-transform"><span>03. </span>Landscape desing</p>
-
-                <img src="assets/images/architecture-img8.jpg.webp" alt="Architecture" width="800" height="435">
-
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    the industry.
+            <div class="services__container-item">
+                <h1><span>03.</span> Paisagismo</h1>
+                <div>
+                    <img src="assets/images/landscaping-service.jpg" alt="Architecture">
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry.
                 </p>
-
-                <hr class="hr">
+                <div class="red-line"></div>
             </div>
-
-            <div class="servicos-item">
-                <p class="texto-transform"><span>04. </span>Urban Planning</p>
-
-                <img src="assets/images/architecture-img9.jpg.webp" alt="Architecture" width="800" height="435">
-
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    the industry.
+            <div class="services__container-item">
+                <h1><span>04.</span> Planejamento Urbano</h1>
+                <div>
+                    <img src="assets/images/urban-service.jpg" alt="Architecture">
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry.
                 </p>
-
-                <hr class="hr">
+                <div class="red-line"></div>
             </div>
         </div>
     </section>
 
-    <section id="projects">
-        <div class="container">
-            <div class="container-item projetos-bg">
-                <div class="number">
-                    <p>03</p>
+    <section class="section" id="projects">
+        <div class="bg-color section__image">
+            <span>03</span>
+        </div>
+        <div class="section__description">
+            <h2>Projetos</h2>
+            <p>Ideias sem risco não merecem esse nome.</p>
+        </div>
+    </section>
+
+    <section class="section" id="people">
+        <div class="section__image">
+            <img src="assets/images/people-section.jpg" alt="People">
+            <span>04</span>
+        </div>
+        <div class="section__description">
+            <h2>Pessoas</h2>
+            <p>Quando todos avançam juntos, o sucesso se torna inevitável.</p>
+        </div>
+    </section>
+
+    <section class="section" id="blog">
+        <div class="section__image">
+            <img src="assets/images/blog-section.jpg" alt="People">
+            <span>05</span>
+        </div>
+        <div class="section__description">
+            <h2>Blog</h2>
+            <p>Não há problema em reler um livro que você ama.</p>
+        </div>
+    </section>
+
+    <section class="blog__container">
+        <div class="container blog__container-row">
+            <div class="blog__container-item">
+                <div class="blog__item-img">
+                    <img src="assets/images/blog-01.jpg" alt="Design Interior">
                 </div>
-                <div class="projetos-menu">
-                    <ul>
-                        <li><a href="./">All</a></li>
-                        <li><a href="./">Architecture</a></li>
-                        <li><a href="./">Civil & Structural</a></li>
-                        <li><a href="./">Landscape Desing</a></li>
-                        <li><a href="./">Urban Planning</a></li>
+            </div>
+            <div class="blog__container-item">
+                <div class="blog__item-description">
+                    <span>Agosto 27, 2024</span>
+                    <p>A arquitetura é a arte de como desperdiçar espaço.</p>
+                    <div class="red-line"></div>
+                </div>
+            </div>
+            <div class="blog__container-item">
+                <div class="blog__item-img">
+                    <img src="assets/images/blog-02.jpg" alt="Design Interior">
+                </div>
+            </div>
+            <div class="blog__container-item">
+                <div class="blog__item-description">
+                    <span>Agosto 27, 2024</span>
+                    <p>A arquitetura transforma o vazio em uma expressão de beleza e propósito.</p>
+                    <div class="red-line"></div>
+                </div>
+            </div>
+            <div class="blog__container-item">
+                <div class="blog__item-description">
+                    <span>Agosto 27, 2024</span>
+                    <p>Arquitetura é a busca pela verdade.</p>
+                    <div class="red-line"></div>
+                </div>
+            </div>
+            <div class="blog__container-item">
+                <div class="blog__item-img">
+                    <img src="assets/images/blog-03.jpg" alt="Design Interior">
+                </div>
+            </div>
+            <div class="blog__container-item">
+                <div class="blog__item-description">
+                    <span>Agosto 27, 2024</span>
+                    <p>Arquitetura é a arte de moldar o espaço, criando o belo a partir do vazio.</p>
+                    <div class="red-line"></div>
+                </div>
+            </div>
+            <div class="blog__container-item">
+                <div class="blog__item-img">
+                    <img src="assets/images/blog-04.jpg" alt="Design Interior">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="container__row">
+            <div class="container__column" id="comments">
+                <div class="comments">
+                    <ul class="comments__list">
+                        <li class="comments__list-item">
+                            <div class="comment__item-img">
+                                <img src="assets/images/comment-01.png" alt="Profile">
+                            </div>
+                            <div class="comment__item-desc">
+                                <div class="comment__item-quote"></div>
+                                <div class="comment__item-description">
+                                    <p>A melhor experiência de atendimento ao cliente é quando o cliente não precisa
+                                        falar com você. Simplesmente funciona.
+                                    </p>
+                                </div>
+                                <div class="comment__item-author">
+                                    <p>John Doe</p>
+                                </div>
+                                <div class="comment__item-enterprise">
+                                    <span>Cerberus INC</span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="comments__list-item">
+                            <div class="comment__item-img">
+                                <img src="assets/images/comment-02.png" alt="Profile">
+                            </div>
+                            <div class="comment__item-desc">
+                                <div class="comment__item-quote"></div>
+                                <div class="comment__item-description">
+                                    <p>O serviço perfeito é aquele que você nem percebe que está lá, porque tudo
+                                        funciona perfeitamente.
+                                    </p>
+                                </div>
+                                <div class="comment__item-author">
+                                    <p>Celine Ford</p>
+                                </div>
+                                <div class="comment__item-enterprise">
+                                    <span> Brando INC</span>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="container-item">
-                <h2 class="texto-transform"><span>/</span>Projects</h2>
-                <p class="texto-transform paragrafo">
-                    An idea that is not dangerous is unworthy of being called an idea at all.
-                </p>
-            </div>
-        </div>
-
-        <div class="projetos-container">
-            <div class="projetos-imagens">
-                <img src="assets/images/architecture-img10.jpg.webp" alt="Project" width="800" height="800">
-                <div class="overflow-img">
-                    <hr>
-                    <h3 class="texto-transform">Amazon at denny</h3>
-                    <span class="texto-transform">Seattle, wa, usa</span>
-                </div>
-            </div>
-            <div class="projetos-imagens">
-                <img src="assets/images/architecture-img11.jpg.webp" alt="Project" width="800" height="800">
-                <div class="overflow-img">
-                    <hr class="hr">
-                    <h3 class="texto-transform">Red Hook Inovation</h3>
-                    <span class="texto-transform">Brooklyn, ny, usa</span>
-                </div>
-            </div>
-            <div class="projetos-imagens">
-                <img src="assets/images/architecture-img12.jpg.webp" alt="Project" width="800" height="800">
-                <div class="overflow-img">
-                    <hr class="hr">
-                    <h3 class="texto-transform">Rupp Arena Reinvention</h3>
-                    <span class="texto-transform">Lexington, ky, usa</span>
-                </div>
-            </div>
-            <div class="projetos-imagens">
-                <img src="assets/images/architecture-img13.jpg.webp" alt="Project" width="800" height="800">
-                <div class="overflow-img">
-                    <hr class="hr">
-                    <h3 class="texto-transform">Olympic Sport Center</h3>
-                    <span class="texto-transform">Hangzhou, China</span>
-                </div>
-            </div>
-            <div class="projetos-imagens">
-                <img src="assets/images/architecture-img14.jpg.webp" alt="Project" width="800" height="800">
-                <div class="overflow-img">
-                    <hr class="hr">
-                    <h3 class="texto-transform">Veterans Health Care</h3>
-                    <span class="texto-transform">New Orleans, LA, USA</span>
-                </div>
-            </div>
-            <div class="projetos-imagens">
-                <img src="assets/images/architecture-img15.jpg.webp" alt="Project" width="800" height="800">
-                <div class="overflow-img">
-                    <hr class="hr">
-                    <h3 class="texto-transform">Shanghai Hospital</h3>
-                    <span class="texto-transform">Shanghai, China</span>
-                </div>
-            </div>
-            <div class="projetos-imagens">
-                <img src="assets/images/architecture-img16.jpg.webp" alt="Project" width="800" height="800">
-                <div class="overflow-img">
-                    <hr class="hr">
-                    <h3 class="texto-transform">Samsung Headquarters</h3>
-                    <span class="texto-transform">San Jose, CA, USA</span>
-                </div>
-            </div>
-            <div class="projetos-imagens">
-                <img src="assets/images/architecture-img17.jpg.webp" alt="Project" width="800" height="800">
-                <div class="overflow-img">
-                    <hr class="hr">
-                    <h3 class="texto-transform">Estrella Medical</h3>
-                    <span class="texto-transform">Phoenix, AZ, usa</span>
+            <div class="bg-color container__column">
+                <div class="quote">
+                    <div class="quote__icon"></div>
+                    <p class="quote__description">A arquitetura é o espelho da nossa civilização e de nossa cultura. Por
+                        isso, a arquitetura tem a responsabilidade de refletir a qualidade da vida que levamos.
+                    </p>
+                    <span class="quote__author">Frank Lloyd Wright</span>
+                    <span class="quote__enterprise">Arquiteto</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="team">
-        <div class="container">
-            <div class="container-item imagem-bg pessoa-bg">
-                <div class="number">
-                    <p>04</p>
-                </div>
-            </div>
-
-            <div class="container-item">
-                <h2 class="texto-transform"><span>/</span>The team</h2>
-                <p class="texto-transform paragrafo">
-                    If everyone is moving forward together, then success takes care of itself.
-                </p>
-            </div>
+    <section class="section" id="contact">
+        <div class="section__image">
+            <img src="assets/images/contact-section.jpg" alt="People">
+            <span>06</span>
         </div>
-
-        <div class="container-time">
-            <div class="time-item">
-                <img src="assets/images/architecture-img19.jpg.webp" alt="Team" width="800" height="864">
-                <div class="overlay-time">
-                    <div>
-                        <h3 class="texto-transform">Sancho Pansa</h3>
-                        <p class="texto-transform">CEO, Co-Founder</p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium non nam et nulla animi
-                            at?
-                        </p>
-                        <a href="./" class="texto-transform">Facebook /</a>
-                        <a href="./" class="texto-transform">Instagram /</a>
-                        <a href="./" class="texto-transform">Twitter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="time-item">
-                <img src="assets/images/architecture-img20.jpg.webp" alt="Team" width="800" height="864">
-
-                <div class="overlay-time">
-                    <div>
-                        <h3 class="texto-transform">Herman Miller</h3>
-                        <p class="texto-transform">CEO / Architect</p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium non nam et nulla animi
-                            at?
-                        </p>
-
-                        <a href="./" class="texto-transform">Facebook /</a>
-                        <a href="./" class="texto-transform">Instagram /</a>
-                        <a href="./" class="texto-transform">Twitter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="time-item">
-                <img src="assets/images/architecture-img21.jpg.webp" alt="Team" width="800" height="864">
-
-                <div class="overlay-time">
-                    <div>
-                        <h3 class="text-transform">Bryan Jonhson</h3>
-                        <p class="text-transform">Project Manager</p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium non nam et nulla animi
-                            at?
-                        </p>
-                        <a href="./" class="texto-transform">Facebook /</a>
-                        <a href="./" class="texto-transform">Instagram /</a>
-                        <a href="./" class="texto-transform">Twitter</a>
-                    </div>
-                </div>
-            </div>
+        <div class="section__description">
+            <h2>Contato</h2>
+            <p>Quem você é fala tão alto que suas palavras se perdem.</p>
         </div>
+    </section>
 
-        <div class="time-projetos">
-            <div class="time-card">
-                <h3>780</h3>
-                <span class="texto-transform">Happy Clients</span>
+    <section class="container">
+        <div class="container__row">
+            <div class="container__column">
+                <div class="contact__form">
+                    <form action="#">
+                        <div class="contact__form-item">
+                            <input type="text" placeholder="Seu nome">
+                        </div>
+                        <div class="contact__form-item">
+                            <input type="email" placeholder="Seu e-mail">
+                        </div>
+                        <div class="contact__form-item">
+                            <select name="interesse" id="interesse">
+                                <option value="pensando">No que você está pensando</option>
+                                <option value="arquitetura">Arquitetura</option>
+                                <option value="civilAndEstrutural">Civil & Estrutural</option>
+                                <option value="paisagismo">Paisagismo</option>
+                                <option value="planejamentoUrbano">Planejamento Urbano</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        <div class="contact__form-item">
+                            <textarea name="mensagem" id="mensagem" rows="5" placeholder="Sua mensagem"></textarea>
+                        </div>
+                        <div class="contact__form-item">
+                            <button type="button">Enviar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="time-card">
-                <h3>987</h3>
-                <span class="texto-transform">Project Completed</span>
-            </div>
-            <div class="time-card">
-                <h3>350</h3>
-                <span class="texto-transform">Cups of coffee</span>
-            </div>
-            <div class="time-card">
-                <h3>166</h3>
-                <span class="texto-transform">Award Winning</span>
+            <div class="bg-color container__column" id="contact-list">
+                <ul class="contact__list">
+                    <li>
+                        <div class="contact__list-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact__list-description">
+                            <p>Nosso estudio</p>
+                            <address>245, Centro, Serra Grande - PB</address>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact__list-icon">
+                            <i class="fa-solid fa-clipboard"></i>
+                        </div>
+                        <div class="contact__list-description">
+                            <p>Consultas gerais</p>
+                            <span>branco@contato.com.br</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact__list-icon">
+                            <i class="fa-solid fa-mobile"></i>
+                        </div>
+                        <div class="contact__list-description">
+                            <p>Ligue para nós hoje mesmo</p>
+                            <span>+55 (83) 98765-4321</span>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="blog">
-        <div class="container">
-            <div class="container-item imagem-bg blog-bg">
-                <div class="number">
-                    <p>05</p>
-                </div>
-            </div>
-
-            <div class="container-item">
-                <h2 class="texto-transform"><span>/</span>Recent Blog</h2>
-                <p class="texto-transform paragrafo">
-                    There's nothing wrong with reading a book you love over and over.
-                </p>
-            </div>
-        </div>
-
-        <div class="blog-container">
-            <div class="blog-item">
-                <div class="blog-imagens">
-                    <div class="blog-img blog-card">
-                        <img src="assets/images/architecture-img23.jpg.webp" alt="Architecture" width="300"
-                            height="300">
-                    </div>
-                    <div class="blog-texto blog-card">
-                        <a href="./" class="texto-transform">march 26, 2022</a>
-                        <p class="texto-transform">Architecture is the art of how to waste space.</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="blog-imagens">
-                    <div class="blog-img blog-card">
-                        <img src="assets/images/architecture-img24.jpg.webp" alt="Architecture" width="800"
-                            height="800">
-                    </div>
-                    <div class="blog-texto blog-card">
-                        <a href="./" class="texto-transform">june 26, 2022</a>
-                        <p class="texto-transform">Whatever good things we build end up building us.</p>
-                        <hr>
-                    </div>
-                </div>
-            </div>
-            <div class="blog-item">
-                <div class="blog-imagens">
-                    <div class="blog-img blog-card">
-                        <img src="assets/images/architecture-img25.jpg.webp" alt="Architecture" width="300"
-                            height="300">
-                    </div>
-                    <div class="blog-texto blog-card">
-                        <a href="./" class="texto-transform">march 26, 2022</a>
-                        <p class="texto-transform">The building's in the ornament.</p>
-                        <hr>
-                    </div>
-                </div>
-                <div class="blog-imagens">
-                    <div class="blog-img blog-card">
-                        <img src="assets/images/architecture-img26.jpg.webp" alt="Architecture" width="300"
-                            height="300">
-                    </div>
-                    <div class="blog-texto blog-card">
-                        <a href="./" class="texto-transform">april 26, 2022</a>
-                        <p class="texto-transform">Architecture is the reaching out for the truth.</p>
-                        <hr>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="container-bottom">
-            <div class="item-bottom blog-comentarios">
-                <div class="comentario-item">
-                    <img src="assets/images/architecture-img27-1.jpg.webp" alt="Avatar" width="200" height="200">
-                    <div class="comentario-texto">
-                        <p>The best customer service is if the customer doesn’t need to call you, doesn’t need to
-                            talk to you. It just works.
-                        </p>
-                        <p class="texto-transform">Paul Scrivens</p>
-                        <span class="texto-transform">Google Inc</span>
-                    </div>
-                </div>
-                <div class="comentario-item">
-                    <img src="assets/images/architecture-img28-1.jpg.webp" alt="Avatar" width="200" height="200">
-                    <div class="comentario-texto">
-                        <p>The best customer service is if the customer doesn’t need to call you, doesn’t need to
-                            talk to you. It just works.
-                        </p>
-                        <p class="texto-transform">Nathan Ford</p>
-                        <span class="texto-transform">Facebook INC</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item-bottom vermelho">
-                <p class="container-citacao">
-                    We see our customers as invited guests to a party, and we are
-                    the hosts. It’s our job every day to make every important aspect
-                    of the customer experience a little bit better.
-                </p>
-                <p class="texto-transform citacao-autor">Shoko Mugikura</p>
-                <p class="texto-transform citacao-empresa">Microsoft INC</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <div class="container-item imagem-bg contato-bg">
-                <div class="number">
-                    <p>05</p>
-                </div>
-            </div>
-            <div class="container-item">
-                <h2 class="texto-transform"><span>/</span>Contact</h2>
-                <p class="texto-transform paragrafo">
-                    Who you are is speaking so loudly that i can't hear what you're saying.
-                </p>
-            </div>
-        </div>
-
-        <div class="container-bottom">
-            <div class="item-bottom">
-                <form action="./">
-                    <label for="name"></label>
-                    <input type="text" name="name" id="name" placeholder="Your name">
-
-                    <label for="email"></label>
-                    <input type="email" name="email" id="email" placeholder="Your email">
-
-                    <select name="options">
-                        <option value="" selected>What are you Interested in?</option>
-                        <option value="">Architecture</option>
-                        <option value="">Civil & Structural</option>
-                        <option value="">Landscape Desing</option>
-                        <option value="">Urban Planning</option>
-                        <option value="">Other</option>
-                    </select>
-
-                    <label for="message"></label>
-                    <textarea name="message" cols="30" rows="4" placeholder="Your message" id="message"></textarea>
-                    <button class="contato-botao texto-transform">Submit</button>
-
-                </form>
-            </div>
-
-            <div class="item-bottom vermelho contato-info">
-                <div class="contato-informacoes">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div class="contato-texto">
-                        <span class="texto-transform">Our Studio</span>
-                        <p class="texto-transform">301 the greenhouse, custard</p>
-                        <p class="texto-transform">factory, london, e2 8dy</p>
-                    </div>
-                </div>
-                <div class="contato-informacoes">
-                    <i class="fa-solid fa-clipboard-list"></i>
-                    <div class="contato-texto">
-                        <span class="texto-transform">General enquiries</span>
-                        <p class="texto-transform">youremail@gmail.com</p>
-                    </div>
-                </div>
-                <div class="contato-informacoes">
-                    <i class="fa-solid fa-mobile-screen"></i>
-                    <div class="contato-texto">
-                        <span class="texto-transform">call us today!</span>
-                        <p class="texto-transform">+44 (0) 123 456 7890</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="footer-container">
-            <a href="./"><img src="assets/images/facebook.png" alt="Facebook" height="64" width="64"></a>
-            <a href="./"><img src="assets/images/instagram.png" alt="Instagram" height="64" width="64"></a>
-            <a href="./"><img src="assets/images/twitter.png" alt="Twitter" height="64" width="64"></a>
-            <a href="./"><img src="assets/images/whatsapp.png" alt="Whatsapp" height="64" width="64"></a>
-            <a href="./"><img src="assets/images/youtube.png" alt="Youtube" height="64" width="64"></a>
-            <a href="./"><img src="assets/images/linkedin.png" alt="Linkedin" height="64" width="64"></a>
-        </div>
-
-        <p class="texto-transform">© 2021 BRANDO IS PROUDLY POWERED BY FFS.</p>
-    </footer>
-
-
-    <script src="https://kit.fontawesome.com/5ae928e303.js" crossorigin="anonymous"></script>
+    <script type="module" src="assets/js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/09fa9cee0a.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
