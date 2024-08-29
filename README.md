@@ -52,9 +52,9 @@ Esta é uma landepage para uma empresa de arquitetura, desenvolvido com HTML, CS
 
 ## Personalização
 
-- **CSS**: Adicione ou modifique os estilos no diretório `assets/css`.
+- **Sass**: Adicione ou modifique os estilos no diretório `assets/sass`.
 - **JavaScript**: Adicione funcionalidades no diretório `assets/js`.
-- **Imagens e Ícones**: Coloque suas imagens no diretório `assets/images` ou `assets/icons`.
+- **Imagens**: Coloque suas imagens no diretório `assets/images`.
 
 ## 📖 Como Contribuir
 
