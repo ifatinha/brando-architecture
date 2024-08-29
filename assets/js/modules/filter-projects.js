@@ -1,7 +1,6 @@
 export function filterProjects() {
-    const projects = document.querySelectorAll("[data-types]");
+    const projects = Array.from(document.querySelectorAll("[data-types]"));
     const buttons = document.querySelectorAll("#project-links button");
-    const arrProjects = Array.from(projects);
 
     const activeButton = (index) => {
         buttons.forEach((button, i) => {
@@ -13,7 +12,7 @@ export function filterProjects() {
         activeButton(index);
         const datasetButton = button.dataset.type;
 
-        arrProjects.forEach(item => {
+        projects.forEach(item => {
             const isContains = item.dataset.types.includes(datasetButton);
 
             if (!isContains) {
