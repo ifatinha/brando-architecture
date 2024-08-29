@@ -60,26 +60,32 @@ Esta é uma landepage para uma empresa de arquitetura, desenvolvido com HTML, CS
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests para melhorar o projeto.
 
-1. Fork o repositório.
-2. Crie uma branch para sua feature:
+1. Fork o repositório clicando no botão "Fork" no topo da página do repositório.
+
+2. Clone o seu fork para sua máquina local:
+
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+
+3. Crie uma branch para sua feature:
 
     ```bash
     git checkout -b minha-feature
     ```
 
-3. Faça commit das suas mudanças:
+4. Faça commit das suas mudanças:
 
     ```bash
     git commit -am 'Adiciona nova feature'
     ```
 
-4. Push para a branch:
+5. Push para a branch:
 
     ```bash
     git push origin minha-feature
     ```
 
-5. Crie uma Pull Request.
+6. Crie uma Pull Request.
 
 ## Licença
 
