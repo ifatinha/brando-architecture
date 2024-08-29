@@ -1,4 +1,4 @@
-export function filterProjects() {
+function activeLinks() {
     const buttons = document.querySelectorAll("#project-links button");
 
     const activeButtons = (index) => {
@@ -12,4 +12,15 @@ export function filterProjects() {
     })
 
     activeButtons(0);
+}
+
+export function filterProjects() {
+    const projects = document.querySelectorAll("[data-projects]");
+    const valores = projects[7].dataset.projects;
+    const arr = valores.length;
+
+    console.log(valores.substr(1, arr - 2));
+
+
+    activeLinks();
 }
